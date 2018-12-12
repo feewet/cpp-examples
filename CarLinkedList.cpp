@@ -1,7 +1,9 @@
 // CarLinkedList.cpp
 
 #ifndef CARLINKEDLIST_H_
+#include "Car.h"
 #include "CarLinkedList.h"
+#include <string>
 
 // Constructor
 CarLinkedList::CarLinkedList() {
@@ -104,14 +106,16 @@ Car CarLinkedList::remove(int n) {
 	else {
 		node *n = head;
 		node *previous = 0;
+		int k = 0;
 		for (int i = 0; i < size; i++) {
-			if (i == n) {
+			if (i == k) {
 				previous->next = n->next;
 				size--;
 				return n->car;
 			}
 			previous = n;
 			n = n->next;
+			k++;
 		}
 	}
 } 
@@ -126,9 +130,10 @@ Car* CarLinkedList::getArray() {
 	return cars;
 }
 
+// Copy array
 void CarLinkedList::copy(Car* cars) {
-	for (int i; i < sizeof(cars), i++) {
-		add(c[i]);
+	for (int i; i < sizeof(cars); i++) {
+		add(cars[i]);
 	}
 }
 
