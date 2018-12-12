@@ -7,7 +7,7 @@
 struct node {
 	Car car;
 	node *next;
-}
+};
 
 // Stores Car LinkedList and functions
 class CarLinkedList{
@@ -22,6 +22,6 @@ class CarLinkedList{
 		void add(Car c); // Add Car
 		Car get(int n); // get Car at n
 		Car remove(int n); // Remove Car at n
-}
+};
 
 #endif
