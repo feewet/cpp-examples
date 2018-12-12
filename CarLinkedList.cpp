@@ -46,7 +46,8 @@ void CarLinkedList::print() {
 
 // Get cars by year through QuickSort
 CarLinkedList CarLinkedList::getCarsByYear(){
-	return QuickSortCars::sort(toArray());
+	CarLinkedList c;
+	return c.copu(QuickSortCars::sort(toArray()));
 }
 
 // Get List Size
@@ -136,6 +137,7 @@ void CarLinkedList::copy(Car* cars) {
 	for (int i = 0; i < sizeof(cars); i++) {
 		add(cars[i]);
 	}
+	delete cars;
 }
 
 #endif
