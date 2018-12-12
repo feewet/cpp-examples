@@ -3,7 +3,7 @@
 #ifndef DYNAMICCARARRAY_H_
 #define DYNAMICCARARRAY_H_
 
-Class Car;
+class Car;
 // Dynamnic array to hold Cars.
 class DynamicCarArray {
 	private:
