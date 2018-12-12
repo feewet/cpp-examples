@@ -3,6 +3,8 @@
 #ifndef CAR_H_
 #include "Car.h"
 
+#include <string>
+
 Car::Car(std::string _make, std::string _model, int _year, std::string _color) {
 	make = _make;
 	model = _model;
