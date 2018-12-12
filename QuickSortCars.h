@@ -9,7 +9,7 @@ class QuickSortCars {
 		int partition(Car *arr, int low, int high);
 		void swap(Car* a, Car* b);
 	public:
-		Car* sort(Car* cars);
+		Car* sort(Car* cars, int size);
 };
 
 #endif
