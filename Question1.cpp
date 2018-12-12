@@ -16,19 +16,8 @@
 using namespace std;
 
 class Question1 {
-	private:
-		DynamicCarArray populateArray(); // Populate Array from Cars.txt
-		void printCarsArray(DynamicCarArray cars);
-		void sortCarsByYear(DynamicCarArray cars);
-		void sortCarsByMake(DynamicCarArray cars);
-		Car getCarInput();
-		int menu();
-	public:
-		void run();
-};
-
-// Populate Array from Cars.txt
-DynamicCarArray Question1::populateArray() {
+	// Populate Array from Cars.txt
+DynamicCarArray populateArray() {
 	DynamicCarArray cars;
 	ifstream file("Cars.txt");
 	if (file.is_open()) {
@@ -62,15 +51,15 @@ DynamicCarArray Question1::populateArray() {
 	return cars;
 }
 
-void Question1::printCarsArray(DynamicCarArray cars) {
+void printCarsArray(DynamicCarArray cars) {
 	cars.print();
 }
 
-void Question1::sortCarsByYear(DynamicCarArray cars) {
+void sortCarsByYear(DynamicCarArray cars) {
 	cars.sortCarsByYear().print();
 }
 
-void Question1::sortCarsByMake(DynamicCarArray cars) {
+void sortCarsByMake(DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
@@ -84,7 +73,7 @@ void Question1::sortCarsByMake(DynamicCarArray cars) {
 }
 
 // Read new Car
-Car Question1::getCarInput() {
+Car getCarInput() {
 	string make, model, yearStr, color;
 	int year;
 	cout << "Enter Make: ";
@@ -116,7 +105,7 @@ Car Question1::getCarInput() {
 	return Car(make, model, year, color);
 }
 
-void Question1::run() {
+void run() {
 	DynamicCarArray cars = populateArray();
 	int choice = 0;
 
@@ -146,7 +135,7 @@ void Question1::run() {
 	cout << "\nDone.";
 }
 
-int Question1::menu() {
+int menu() {
 	string choice = "0";
 	cout << "Main menu:\n\n1. Print the cars array\n2. Insert car record\n";
 	cout << "3. Sort cars by year\n4. Search cars by make\n5. Exit\n\nSelect an option: ";
@@ -169,3 +158,4 @@ int Question1::menu() {
 	}
 	return 0;
 }
+};
