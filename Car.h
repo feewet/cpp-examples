@@ -3,7 +3,7 @@
 #ifndef CAR_H_
 #define CAR_H_
 
-//#include <string>
+#include <string>
 
 class Car {
 	private:

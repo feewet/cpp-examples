@@ -1,7 +1,5 @@
 // Car.cpp
 
-#include <string>
-
 #ifndef CAR_H_
 #include "Car.h"
 
@@ -24,7 +22,7 @@ int Car::getYear() {
 	return year;
 }
 
-String Car::getColor() {
+string Car::getColor() {
 	return color;
 }
 
