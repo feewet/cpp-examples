@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
+#include <string>
 #include "Car.h"
 #include "DynamicCarArray.h"
 #include "CarLinkedList.h"
