@@ -25,6 +25,7 @@ DynamicCarArray Question1::populateArray() {
 		int year;
 
 		while (getline(file, line)) {
+			stringstream ss(line);
 	    	// read 4 lines
 	    	getline(line, make, ',');
 	    	getline(line, model, ',');
