@@ -9,11 +9,8 @@ class Question1 {
 		Car getCarInput();
 		int menu();
 	public:
-		Question1();
 		void run();
 };
-
-Question1::Question1() {}
 
 // Populate Array from Cars.txt
 DynamicCarArray Question1::populateArray() {
@@ -62,7 +59,7 @@ void Question1::sortCarsByMake(DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	DynamicCarArray sorted = cars.sortCarsByMake(make);
+	DynamicCarArray sorted = cars.sortCarsByMake(make, cars);
 	if (sorted.length() != 0) {
 		sorted.print();
 	}
