@@ -15,18 +15,6 @@
 
 using namespace std;
 
-class Question1 {
-	private:
-		DynamicCarArray populateArray(); // Populate Array from Cars.txt
-		void printCarsArray(DynamicCarArray cars);
-		void sortCarsByYear(DynamicCarArray cars);
-		void sortCarsByMake(DynamicCarArray cars);
-		Car getCarInput();
-		int menu();
-	public:
-		void run();
-};
-
 // Populate Array from Cars.txt
 DynamicCarArray Question1::populateArray() {
 	DynamicCarArray cars;
