@@ -105,7 +105,7 @@ Car getCarInput() {
 	return Car(make, model, year, color);
 }
 
-public void run() {
+public: void run() {
 	DynamicCarArray cars = populateArray();
 	int choice = 0;
 
