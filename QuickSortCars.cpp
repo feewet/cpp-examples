@@ -1,6 +1,8 @@
 // QuickSort.cpp
 
 #ifndef QUICKSORTCARS_H_
+#include "DynamicCarArray.h"
+#include "LinkedCarList"
 #include "QuickSortCars.h"
 
 // Sort cars dynamic array (copy)
