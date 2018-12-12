@@ -1,7 +1,7 @@
 // Car.h
 
 #ifndef CAR_H_
-#include "header.h"
+#define CAR_H_
 
 class Car {
 	private:
