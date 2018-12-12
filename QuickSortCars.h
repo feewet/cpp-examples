@@ -3,7 +3,7 @@
 #ifndef QUICKSORTCARS_H_
 #define QUICKSORTCARS_H_
 
-static class QuickSortCars {
+class QuickSortCars {
 	private:
 		void quickSortCars(Car* arr, int low, int high);
 		int partition(Car *arr, int low, int high);
