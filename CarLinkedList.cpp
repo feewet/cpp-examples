@@ -3,7 +3,7 @@
 #ifndef CARLINKEDLIST_H_
 #include "Car.h"
 #include "CarLinkedList.h"
-//#include <string>
+#include "QuickSortCars.h"
 #include <iostream>
 
 // Constructor
@@ -124,7 +124,7 @@ Car* CarLinkedList::getArray() {
 	node *c = head;
 	int i = 0;
 		while(c != 0) {
-			cars[i] = &c;
+			cars[i] = c->car;
 			c = c->next;
 			i++;
 		}
