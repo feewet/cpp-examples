@@ -5,16 +5,16 @@
 
 class Car {
 	private:
-		string make;
-		string model;
+		std::string make;
+		std::string model;
 		int year;
-		string color;
+		std::string color;
 	public:
-		Car(string _make, string _model, int _year, string _color)
-		string getMake();
-		string getModel();
+		Car(std::string _make, std::string _model, int _year, std::string _color)
+		std::string getMake();
+		std::string getModel();
 		int getYear();
-		String getColor();
+		std::string getColor();
 };
 
 #endif
