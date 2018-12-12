@@ -12,8 +12,10 @@ using namespace std;
 #include <fstream>
 #include <stdio.h>
 #include <string>
+#include <regex>
 #include "Car.h"
 #include "DynamicCarArray.h"
+#include "QuickSortCars.h"
 #include "CarLinkedList.h"
 #include "Question1.cpp"
 #include "Question2.cpp"

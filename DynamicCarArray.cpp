@@ -1,6 +1,7 @@
 // DynamicCarArray.cpp
-#ifndef DynamicCarArrayH
-#include DynamicCarArrayH
+
+#ifndef DYNAMICCARARRAY_H_
+#include "DynamicCarArray.h"
 
 // Default Constructor
 DynamicCarArray::DynamicCarArray() {
@@ -27,12 +28,37 @@ void DynamicCarArray::print() {
 	cout << "\n";
 }
 
+// sort cars by year
+DynamicCarArray DynamicCarArray::sortCarsByYear() {
+	DynamicCarArray cars;
+	for (int i = 0; i < count; i++) {
+		if (v[i].getYear() == year) {
+
+		}
+	}
+}
+
+// sort cars by make
+DynamicCarArray DynamicCarArray::sortCarsByMake(string make) {
+
+}
+
 // Add one element
 void DynamicCarArray::add(Car c) {
 	v[count] = c;
 	count ++;
 	if (count == size) {
 		grow();
+	}
+}
+
+Car DynamicCarArray::get(int n) {
+	if (n > 0 && n < count) {
+		return car[n]
+	}
+	else {
+		cout << "DynamicCarArray.get - Invalid index: " << n << endl;
+		return NULL;
 	}
 }
 
@@ -51,6 +77,10 @@ void DynamicCarArray::remove(int n) {
 			shrink();
 		}
 	}
+}
+
+int DynamicCarArray::count(){
+	return count;
 }
 
 // Double vector capacity
@@ -73,6 +103,35 @@ void DynamicCarArray::shrink() {
         delete v;
         v = nv;
         size = size / 2;
+}
+
+int DynamicCarArray::getCapacity() {
+	return size;
+}
+
+// copy array from Dynamic Array (overwrite)
+void DynamicCarArray::copy(DynamicCarArray cars) {
+	size = cars.getCapacity();
+	count = cars.count();
+	v = new Car[size];
+	for (int i; i < cars.count(), i++) {
+		v[i] = cars.get(i);
+	}
+}
+
+// copy array from Car Array (overwrite)
+void DynamicCarArray::copy(Car *c) {
+	size = 2;
+	count = 0;
+	v = new Car[size];
+	for (int i; i < sizeof(c), i++) {
+		add(c[i]);
+	}
+}
+
+// return array of Car
+Car* DynamicCarArray::toArray() {
+	return v - (size - count);
 }
 
 #endif

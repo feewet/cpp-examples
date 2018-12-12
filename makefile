@@ -1,8 +1,8 @@
 # myclass program Makefile
 
 GCC = g++
-CFLAGS = -g -Wall -w
-OBJS = main.o Car.o CarLinkedList.o DynamicCarArray.o Question1.o Question2.o
+CFLAGS = -g -Wall -w -std=c++11
+OBJS = main.o Car.o CarLinkedList.o DynamicCarArray.o QuickSortCars.o Question1.o Question2.o 
 
 main: $(OBJS)
 	$(GCC) $(OBJS) -o main

@@ -2,7 +2,7 @@
 
 class Question1 {
 	private:
-		populateArray(DynamicCarArray &cars); // Populate Array from Cars.txt
+		DynamicCarArray populateArray(); // Populate Array from Cars.txt
 		void printCarsArray(DynamicCarArray cars);
 		void sortCarsByYear(int year, DynamicCarArray cars);
 		void sortCarsByMake(string make, DynamicCarArray cars);
@@ -16,7 +16,8 @@ class Question1 {
 Question1::Question1() {}
 
 // Populate Array from Cars.txt
-void Question1::populateArray(DynamicCarArray &cars) {
+DynamicCarArray Question1::populateArray() {
+	DynamicCarArray cars = new DynamicCarArray();
 	ofstream file("Cars.txt");
 	if (file.is_open()) {
 		string line;
@@ -41,6 +42,7 @@ void Question1::populateArray(DynamicCarArray &cars) {
 	else {
 		cout << "Unable to open Cars.txt";
 	}
+	return cars;
 }
 
 void Question1::printCarsArray(DynamicCarArray cars) {
@@ -98,7 +100,7 @@ Car Question1::getCarInput() {
 }
 
 void Question1::run() {
-	DynamicCarArray cars = new DynamicCarArray();
+	DynamicCarArray *cars = new DynamicCarArray();
 	populateArray(cars);
 	int choice = 0;
 
