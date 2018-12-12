@@ -91,7 +91,7 @@ Car getCarInput() {
 	    // parsing input using regex
     	sscanf(char_array, "%d", &year);
 
-		if (regex_match(char_array, regex("%d{4}"))) {
+		if (regex_match(char_array, regex("%d"))) {
 			sscanf(char_array, "%d", &year);
 			break;
 		}
