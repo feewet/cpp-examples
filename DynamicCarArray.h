@@ -18,7 +18,7 @@ class DynamicCarArray {
 		void add(Car c); // add Car to array
 		Car get(int n); // Get car at index n
 		void remove(int n); // remove nth element
-		int count(); // return count of elements
+		int length(); // return count of elements
 		void grow(); // grow Array
 		void shrink(); // shrink array
 		int getCapacity(); // return capacity of array

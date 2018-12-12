@@ -4,7 +4,7 @@ class Question1 {
 	private:
 		DynamicCarArray populateArray(); // Populate Array from Cars.txt
 		void printCarsArray(DynamicCarArray cars);
-		void sortCarsByYear(int year, DynamicCarArray cars);
+		void sortCarsByYear(DynamicCarArray cars);
 		void sortCarsByMake(string make, DynamicCarArray cars);
 		Car getCarInput();
 		int menu();
@@ -17,7 +17,7 @@ Question1::Question1() {}
 
 // Populate Array from Cars.txt
 DynamicCarArray Question1::populateArray() {
-	DynamicCarArray cars = new DynamicCarArray();
+	DynamicCarArray cars;
 	ofstream file("Cars.txt");
 	if (file.is_open()) {
 		string line;
@@ -25,7 +25,7 @@ DynamicCarArray Question1::populateArray() {
 		string make, model, yearStr, color;
 		int year;
 
-		while (getline(myfile, line))
+		while (getline(file, line))
 	    {
 	    	// read 4 lines
 	    	getline(ss, make, ',');
@@ -37,7 +37,7 @@ DynamicCarArray Question1::populateArray() {
 	    	car = new Car(make, model, year, color);
 	    	cars.add(car);
 	    }
-	    myfile.close();
+	    file.close();
 	}
 	else {
 		cout << "Unable to open Cars.txt";
@@ -50,21 +50,26 @@ void Question1::printCarsArray(DynamicCarArray cars) {
 }
 
 void Question1::sortCarsByYear(DynamicCarArray cars) {
-	cars.sortCarsByYear(year).print();
+	cars.sortCarsByYear().print();
 }
 
 void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	cars.sortCarsByMake(make).print();
+	sort = cars.sortCarsByMake();
+	if (sort.length() != 0) {
+		sort.print();
+	}
+	else {
+		cout << "No cars with make: " << make << endl;
+	}
 }
 
 // Read new Car
 Car Question1::getCarInput() {
 	string make, model, yearStr, color;
 	int year;
-	Car car;
 	cout << "Enter Make: ";
 	cin >> make;
 	cout << "Enter Model: ";

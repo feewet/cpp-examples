@@ -75,7 +75,7 @@ void DynamicCarArray::remove(int n) {
 	}
 }
 
-int DynamicCarArray::count(){
+int DynamicCarArray::length(){
 	return count;
 }
 
@@ -108,9 +108,9 @@ int DynamicCarArray::getCapacity() {
 // copy array from Dynamic Array (overwrite)
 void DynamicCarArray::copy(DynamicCarArray cars) {
 	size = cars.getCapacity();
-	count = cars.count();
+	count = cars.length();
 	v = new Car[size];
-	for (int i; i < cars.count(), i++) {
+	for (int i; i < cars.length(), i++) {
 		v[i] = cars.get(i);
 	}
 }
