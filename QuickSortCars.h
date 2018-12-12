@@ -3,13 +3,13 @@
 #ifndef QUICKSORTCARS_H_
 #define QUICKSORTCARS_H_
 
-class QuickSortCars {
+static class QuickSortCars {
 	private:
-		static void quickSortCars(Car* arr, int low, int high);
-		static int partition(Car *arr, int low, int high);
-		static int swap(Car* a, Car* b);
+		void quickSortCars(Car* arr, int low, int high);
+		int partition(Car *arr, int low, int high);
+		int swap(Car* a, Car* b);
 	public:
-		static Car* sort(Car* cars);
+		Car* sort(Car* cars);
 };
 
 #endif
