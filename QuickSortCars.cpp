@@ -4,13 +4,13 @@
 #include "Car.h"
 #include "QuickSortCars.h"
 
-Car* quickSortCars::sort(Car* cars) {
+static Car* quickSortCars::sort(Car* cars) {
 	quickSortCars(&cars, 0, (cars.count() - 1));
 	return cars
 }
 
 // swap two elements
-void QuickSortCars::swap(Car* a, Car* b) 
+static void QuickSortCars::swap(Car* a, Car* b) 
 { 
     Car t = *a;
     *a = *b;
@@ -19,7 +19,7 @@ void QuickSortCars::swap(Car* a, Car* b)
 
 // places all elements smaller than pivot left of pivot
 // places all elements larger than pivot to right of pivot
-int QuickSortCars::partition(Car *arr, int low, int high) {
+static int QuickSortCars::partition(Car *arr, int low, int high) {
     int pivot = arr[high].getYear(); // pivot
     int i = (low - 1); // smaller element
   
@@ -39,7 +39,7 @@ int QuickSortCars::partition(Car *arr, int low, int high) {
 // arr[] : array
 // low : starting index
 // high : Ending index
-void QuickSortCars::quickSortCars(Car *arr, int low, int high) 
+static void QuickSortCars::quickSortCars(Car *arr, int low, int high) 
 {
     if (low < high)
     { 
