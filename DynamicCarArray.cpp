@@ -70,7 +70,7 @@ Car DynamicCarArray::get(int n) {
 	}
 	else {
 		std::cout << "DynamicCarArray.get - Invalid index: " << n << "\n";
-		return NULL;
+		return 0;
 	}
 }
 
@@ -144,7 +144,7 @@ void DynamicCarArray::copy(Car *c) {
 
 // return array of Car
 Car* DynamicCarArray::toArray() {
-	car* cars = new Car[count];
+	Car* cars = new Car[count];
 	for (int i = 0; i < count; i++) {
 		cars[i] = v[i];
 	}
