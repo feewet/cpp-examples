@@ -3,7 +3,6 @@
 #ifndef CARLINKEDLIST_H_
 #include "CarLinkedList.h"
 
-
 // Constructor
 CarLinkedList::CarLinkedList() {
 	size = 0;
