@@ -31,8 +31,15 @@ DynamicCarArray Question1::populateArray() {
 	    	getline(ss, model, ',');
 	    	getline(ss, yearStr, ',');
 	    	getline(ss, color, ',');
-	    	sscanf(yearStr[], "%d", &year);
-	    	// create new car
+		    // declaring character array 
+		    char char_array[yearStr.length() + 1];  
+		    // copying the contents of the  
+		    // string to char array 
+		    strcpy(char_array, s.c_str());  
+		    // parsing input using regex
+	    	sscanf(yearChar, "%d", &year);
+	    	
+	    	// create new Car
 	    	cars.add(new Car(make, model, year, color));
 	    }
 	    file.close();
