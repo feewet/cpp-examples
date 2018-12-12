@@ -10,7 +10,7 @@ class Car {
 		int year;
 		std::string color;
 	public:
-		Car(std::string _make, std::string _model, int _year, std::string _color)
+		Car(std::string _make, std::string _model, int _year, std::string _color);
 		std::string getMake();
 		std::string getModel();
 		int getYear();
