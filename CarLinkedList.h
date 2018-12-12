@@ -14,7 +14,7 @@ class CarLinkedList{
 	private:
 		node *head;
 		node *tail;
-		int length;
+		int size;
 	public:
 		CarLinkedList(); // Default Constructor
 		~CarLinkedList(); // Destructor
