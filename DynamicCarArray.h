@@ -22,7 +22,7 @@ class DynamicCarArray {
 		void grow(); // grow Array
 		void shrink(); // shrink array
 		int getCapacity(); // return capacity of array
-		void copy(DynamnicCarArray c); // copy Dynamic Array (overwrite)
+		void copy(DynamicCarArray c); // copy Dynamic Array (overwrite)
 		void copy(Car *c); // copy array (overwrite)
 		Car* toArray(); // return array of cars
 };
