@@ -47,7 +47,7 @@ void QuickSortCars::quickSortCars(Car *arr, int low, int high)
     } 
 }
 
-Car* quickSortCars::sort(Car* cars, int size) {
+Car* QuickSortCars::sort(Car* cars, int size) {
 	quickSortCars(cars, 0, (size - 1));
 	return cars;
 }
