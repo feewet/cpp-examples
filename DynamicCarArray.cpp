@@ -49,7 +49,7 @@ DynamicCarArray DynamicCarArray::sortCarsByMake(std::string make) {
 		car = get(i);
 		if (car.getMake() == make) {
 			cars[n] = car;
-			n++
+			n++;
 		}
 	}
 	c.copy(cars);
@@ -66,13 +66,7 @@ void DynamicCarArray::add(Car c) {
 }
 
 Car DynamicCarArray::get(int n) {
-	if (n > 0 && n < count) {
 		return car[n];
-	}
-	else {
-		std::cout << "DynamicCarArray.get - Invalid index: " << n << "\n";
-		return NULL;
-	}
 }
 
 // Remove one element given index
