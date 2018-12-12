@@ -41,15 +41,18 @@ DynamicCarArray DynamicCarArray::sortCarsByYear() {
 
 // sort cars by make
 DynamicCarArray DynamicCarArray::sortCarsByMake(std::string make) {
-	DynamicCarArray cars = new DynamicCarArray();
+	DynamicCarArray c;
+	Car* cars;
+	n = 0;
 	for (int i = 0; i < count; i++) {
 		car = get(i);
 		if (car.getMake() == make) {
-			cars.add(get);
+			cars[n] = car;
+			n++
 		}
 	}
-
-	return matchCars;
+	c.copy(cars);
+	return c;
 }
 
 // Add one element
@@ -66,7 +69,7 @@ Car DynamicCarArray::get(int n) {
 		return car[n];
 	}
 	else {
-		std::cout << "DynamicCarArray.get - Invalid index: " << n << endl;
+		std::cout << "DynamicCarArray.get - Invalid index: " << n << "\n";
 		return NULL;
 	}
 }
@@ -94,7 +97,7 @@ int DynamicCarArray::length(){
 
 // Double vector capacity
 void DynamicCarArray::grow() {
-        Car*  nv = new Car*[size * 2];
+        Car*  nv = new Car[size * 2];
         for (int i = 0; i < count; i++) {
                 nv[i] = v[i];
 		}
@@ -141,7 +144,7 @@ void DynamicCarArray::copy(Car *c) {
 
 // return array of Car
 Car* DynamicCarArray::toArray() {
-	car* cars;
+	car* cars = new Car[count];
 	for (int i = 0; i < count; i++) {
 		cars[i] = v[i];
 	}

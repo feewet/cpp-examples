@@ -122,7 +122,7 @@ Car CarLinkedList::remove(int k) {
 } 
 
 Car* CarLinkedList::toArray() {
-	Car* cars;
+	Car* cars = new Car[size];
 	node *c = head;
 	int i = 0;
 		while(c != 0) {
