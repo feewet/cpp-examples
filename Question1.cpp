@@ -18,7 +18,7 @@ Question1::Question1() {}
 // Populate Array from Cars.txt
 DynamicCarArray Question1::populateArray() {
 	DynamicCarArray cars;
-	ofstream file("Cars.txt");
+	ifstream file("Cars.txt");
 	if (file.is_open()) {
 		string line;
 		string make, model, yearStr, color;
