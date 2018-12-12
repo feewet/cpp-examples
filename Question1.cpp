@@ -8,10 +8,7 @@
 #include <regex>
 #include <cstddef>
 #include <bits/stdc++.h>
-#include "Car.h"
 #include "DynamicCarArray.h"
-#include "QuickSortCars.h"
-#include "CarLinkedList.h"
 using namespace std;
 
 class Question1 {
