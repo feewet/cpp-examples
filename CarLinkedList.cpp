@@ -40,13 +40,13 @@ void CarLinkedList::print() {
 			std::cout << c->car.getYear() << " " << c->car.getColor();
 			c = c->next;
 		}
-		cout << "\n";
+		std::cout << "\n";
 	}
 }
 
 // Get cars by year through QuickSort
 CarLinkedList CarLinkedList::getCarsByYear(){
-	return 0;
+	return QuickSortCars.sort(this);
 }
 
 // Get List Size
@@ -122,7 +122,7 @@ Car CarLinkedList::remove(int k) {
 Car* CarLinkedList::getArray() {
 	Car* cars;
 	node *c = head;
-	i = 0;
+	int i = 0;
 		while(c != 0) {
 			cars[i] = &c;
 			c = c->next;
