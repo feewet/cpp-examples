@@ -9,7 +9,7 @@ Car::Car(std::string _make, std::string _model, int _year, std::string _color) {
 	make = _make;
 	model = _model;
 	year = _year;
-	color = _color
+	color = _color;
 }
 
 std::string Car::getMake() {
