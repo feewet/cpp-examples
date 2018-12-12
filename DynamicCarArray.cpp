@@ -66,7 +66,7 @@ void DynamicCarArray::add(Car c) {
 }
 
 Car DynamicCarArray::get(int n) {
-		return car[n];
+		return v[n];
 }
 
 // Remove one element given index
@@ -121,7 +121,7 @@ void DynamicCarArray::copy(DynamicCarArray cars) {
 	size = cars.getCapacity();
 	count = cars.length();
 	v = new Car[size];
-	for (int i; i < cars.length(), i++) {
+	for (int i; i < cars.length(); i++) {
 		v[i] = cars.get(i);
 	}
 }
