@@ -2,7 +2,7 @@
 
 class Question1 {
 	private:
-		DynamicCarArray populateArray(); // Populate Array from Cars.txt
+		populateArray(DynamicCarArray &cars); // Populate Array from Cars.txt
 		void printCarsArray(DynamicCarArray cars);
 		void sortCarsByYear(int year, DynamicCarArray cars);
 		void sortCarsByMake(string make, DynamicCarArray cars);
@@ -48,10 +48,26 @@ void Question1::printCarsArray(DynamicCarArray cars) {
 }
 
 void Question1::sortCarsByYear(int year, DynamicCarArray cars) {
+	string yearStr;
+	int year;
+	while (true) {
+		cout << "Enter Year: ";
+		cin >> yearStr;
+		if (regex_match(yearStr, regex("%d{4}"))) {
+			sscanf(yearStr, "%d", &year);
+			break;
+		}
+		else {
+			cout << "Please enter valid year (XXXX).\n";
+		}
+	}
 	cars.sortCarsByYear(year).print()
 }
 
 void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
+	string make;
+	cout << "Enter Make: ";
+	cin >> make;
 	cars.sortCarsByMake(make).print();
 }
 
@@ -109,9 +125,7 @@ void Question1::run() {
 		}
 		cout << "\n";
 	}
-	delete cars;
 	cout << "\nDone.";
-	return 0;
 }
 
 int Question1::menu() {

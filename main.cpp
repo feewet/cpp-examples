@@ -23,7 +23,7 @@ int main () {
 	Question2 q2;
 	cout << "Question1.cpp: DynamicCarArray";
 	q1.run();
-	coud << "Question2.cpp: CarLinkedList";
-	q2.run()
+	cout << "Question2.cpp: CarLinkedList";
+	q2.run();
 	return 0;
 }
