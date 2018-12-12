@@ -49,21 +49,8 @@ void Question1::printCarsArray(DynamicCarArray cars) {
 	cars.print();
 }
 
-void Question1::sortCarsByYear(int year, DynamicCarArray cars) {
-	string yearStr;
-	int year;
-	while (true) {
-		cout << "Enter Year: ";
-		cin >> yearStr;
-		if (regex_match(yearStr, regex("%d{4}"))) {
-			sscanf(yearStr, "%d", &year);
-			break;
-		}
-		else {
-			cout << "Please enter valid year (XXXX).\n";
-		}
-	}
-	cars.sortCarsByYear(year).print()
+void Question1::sortCarsByYear(DynamicCarArray cars) {
+	cars.sortCarsByYear(year).print();
 }
 
 void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
@@ -100,8 +87,7 @@ Car Question1::getCarInput() {
 }
 
 void Question1::run() {
-	DynamicCarArray *cars = new DynamicCarArray();
-	populateArray(cars);
+	DynamicCarArray cars = populateArray();
 	int choice = 0;
 
 	while (true) {

@@ -26,6 +26,6 @@ int main () {
 	cout << "Question1.cpp: DynamicCarArray";
 	q1.run();
 	cout << "Question2.cpp: CarLinkedList";
-	q2.run();
+	//q2.run();
 	return 0;
 }

@@ -30,12 +30,8 @@ void DynamicCarArray::print() {
 
 // sort cars by year
 DynamicCarArray DynamicCarArray::sortCarsByYear() {
-	DynamicCarArray cars;
-	for (int i = 0; i < count; i++) {
-		if (v[i].getYear() == year) {
-
-		}
-	}
+	Car sorted;
+	
 }
 
 // sort cars by make

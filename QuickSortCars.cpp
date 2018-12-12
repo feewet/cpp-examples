@@ -6,7 +6,8 @@
 // Sort cars array (copy)
 DynamicCarArray QuickSortCars::sort(DynamicCarArray cars) {
 	arr = cars.toArray();
-	return quickSortCars(&arr, 0, (cars.count() - 1));
+	quickSortCars(&arr, 0, (cars.count() - 1));
+	return cars.copy(arr);
 }
 
 // swap two elements
