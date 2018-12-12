@@ -6,6 +6,8 @@
 
 // See Question1.cpp, Question2.cpp
 
+using namespace std;
+
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -15,8 +17,6 @@
 #include "CarLinkedList.h"
 #include "Question1.cpp"
 #include "Question2.cpp"
-
-using namespace std;
 
 int main () {
 	Question1 q1;
