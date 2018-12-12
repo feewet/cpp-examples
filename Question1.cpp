@@ -5,7 +5,7 @@ class Question1 {
 		DynamicCarArray populateArray(); // Populate Array from Cars.txt
 		void printCarsArray(DynamicCarArray cars);
 		void sortCarsByYear(DynamicCarArray cars);
-		void sortCarsByMake(string make, DynamicCarArray cars);
+		void sortCarsByMake(DynamicCarArray cars);
 		Car getCarInput();
 		int menu();
 	public:
