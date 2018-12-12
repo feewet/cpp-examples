@@ -3,6 +3,8 @@
 #ifndef CAR_H_
 #define CAR_H_
 
+#include <string>
+
 class Car {
 	private:
 		std::string make;
