@@ -1,5 +1,7 @@
 // Car.cpp
 
+#include <string>
+
 #ifndef CAR_H_
 #include "Car.h"
 
