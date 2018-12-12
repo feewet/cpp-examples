@@ -4,11 +4,6 @@
 #include "Car.h"
 #include "QuickSortCars.h"
 
-static Car* quickSortCars::sort(Car* cars) {
-	quickSortCars(&cars, 0, (cars.count() - 1));
-	return cars
-}
-
 // swap two elements
 static void QuickSortCars::swap(Car* a, Car* b) 
 { 
@@ -50,6 +45,11 @@ static void QuickSortCars::quickSortCars(Car *arr, int low, int high)
         quickSortCars(arr, low, pi - 1); 
         quickSortCars(arr, pi + 1, high); 
     } 
+}
+
+static Car* quickSortCars::sort(Car* cars) {
+	quickSortCars(&cars, 0, (cars.count() - 1));
+	return cars
 }
 
 #endif
