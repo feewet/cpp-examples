@@ -12,7 +12,7 @@ class Car {
 		int year;
 		std::string color;
 	public:
-		Car() {}; // defult constructor
+		Car(); // defult constructor
 		Car(std::string _make, std::string _model, int _year, std::string _color);
 		std::string getMake();
 		std::string getModel();
