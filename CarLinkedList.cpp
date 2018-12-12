@@ -3,7 +3,7 @@
 #ifndef CARLINKEDLIST_H_
 #include "Car.h"
 #include "CarLinkedList.h"
-#include <string>
+//#include <string>
 
 // Constructor
 CarLinkedList::CarLinkedList() {
@@ -28,7 +28,7 @@ CarLinkedList::~CarLinkedList() {
 
 // Print list
 void CarLinkedList::print() {
-	std::cout << "Printing...\n";
+	cout << "Printing...\n";
 	if (size == 0) {
 		cout << "print(): Array is Empty";
 	}
