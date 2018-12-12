@@ -14,7 +14,9 @@ using namespace std;
 #include <stdio.h>
 #include <string>
 #include <regex>
+#include <cstddef>
 #include <bits/stdc++.h> 
+
 #include "Car.h"
 #include "DynamicCarArray.h"
 #include "QuickSortCars.h"
