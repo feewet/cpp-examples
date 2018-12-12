@@ -1,5 +1,19 @@
 // Question 1
 
+#include <iostream>
+#include <istream>
+#include <fstream>
+#include <stdio.h>
+#include <string>
+#include <regex>
+#include <cstddef>
+#include <bits/stdc++.h>
+#include "Car.h"
+#include "DynamicCarArray.h"
+#include "QuickSortCars.h"
+#include "CarLinkedList.h"
+using namespace std;
+
 class Question1 {
 	private:
 		DynamicCarArray populateArray(); // Populate Array from Cars.txt
