@@ -3,6 +3,8 @@
 #ifndef QUICKSORTCARS_H_
 #define QUICKSORTCARS_H_
 
+class DynamicCarArray;
+class CarLinkedList;
 class QuickSortCars {
 	private:
 		void quickSortCars(Car* arr, int low, int high);
