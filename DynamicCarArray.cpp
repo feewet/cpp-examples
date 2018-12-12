@@ -34,8 +34,9 @@ void DynamicCarArray::print() {
 
 // sort cars by year
 DynamicCarArray DynamicCarArray::sortCarsByYear() {
+	QuickSortCars q;
 	DynamicCarArray c;
-	c.copy(QuickSortCars::sort(toArray()), count);
+	c.copy(q.sort(toArray()), count);
 	return c;
 }
 
