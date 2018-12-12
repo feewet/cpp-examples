@@ -4,6 +4,7 @@
 #include "Car.h"
 #include "DynamicCarArray.h"
 #include "QuickSortCars.h"
+#include <string>
 #include <iostream>
 
 // Default Constructor
@@ -25,8 +26,8 @@ void DynamicCarArray::print() {
 		std::cout << "Array is Empty";
 	}
 	for (int i = 0; i < count; i++) {
-		std::cout << v[i].getMake() << " " << v[i].getModel() << " " 
-		<< v[i].getYear() << " " v[i].getColor();
+		std::cout << v[i].getMake() << " " << v[i].getModel() << " "
+		<< v[i].getYear() << " " << v[i].getColor();
 	}
 	std::cout << "\n";
 }
@@ -39,7 +40,7 @@ DynamicCarArray DynamicCarArray::sortCarsByYear() {
 }
 
 // sort cars by make
-DynamicCarArray DynamicCarArray::sortCarsByMake(string make) {
+DynamicCarArray DynamicCarArray::sortCarsByMake(std::string make) {
 	DynamicCarArray cars = new DynamicCarArray();
 	for (int i = 0; i < count; i++) {
 		car = get(i);

@@ -36,8 +36,8 @@ void CarLinkedList::print() {
 	else {
 		node *c = head;
 		while(c != 0) {
-			std::cout << c->car.getMake() << " " << c->car.getModel() << " ";
-			std::cout << c->car.getYear() << " " << c->car.getColor();
+			std::cout << c->car.getMake() << " " << c->car.getModel() << " "
+			<< c->car.getYear() << " " << c->car.getColor();
 			c = c->next;
 		}
 		std::cout << "\n";
