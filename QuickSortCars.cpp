@@ -3,8 +3,15 @@
 #ifndef QUICKSORTCARS_H_
 #include "QuickSortCars.h"
 
-// Sort cars array (copy)
+// Sort cars dynamic array (copy)
 DynamicCarArray QuickSortCars::sort(DynamicCarArray cars) {
+	arr = cars.toArray();
+	quickSortCars(&arr, 0, (cars.count() - 1));
+	return cars.copy(arr);
+}
+
+// Sort LinkedCardList (copy)
+LinkedCarList QuickSortCars::sort(LinkedCarList cars) {
 	arr = cars.toArray();
 	quickSortCars(&arr, 0, (cars.count() - 1));
 	return cars.copy(arr);

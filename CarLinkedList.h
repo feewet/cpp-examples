@@ -20,9 +20,12 @@ class CarLinkedList{
 		CarLinkedList(); // Default Constructor
 		~CarLinkedList(); // Destructor
 		void print(); // Print list
+		CarLinkedList getCarByYear();
 		void add(Car c); // Add Car
 		Car get(int n); // get Car at n
 		Car remove(int n); // Remove Car at n
+		Car* getArray();
+		void copy(Car* cars);
 };
 
 #endif

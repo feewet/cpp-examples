@@ -9,7 +9,8 @@ class QuickSortCars {
 		int partition(Car *arr, int low, int high);
 		int swap(Car* a, Car* b);
 	public:
-		DynamicCarArray sort(Car cars);
+		DynamicCarArray sort(DynamicCarArray cars);
+		CarLinkedList sort(CarLinkedList cars);
 };
 
 #endif

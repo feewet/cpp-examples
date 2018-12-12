@@ -26,7 +26,7 @@ CarLinkedList::~CarLinkedList() {
 
 // Print list
 void CarLinkedList::print() {
-	cout << "Printing...\n";
+	std::cout << "Printing...\n";
 	if (size == 0) {
 		cout << "print(): Array is Empty";
 	}
@@ -35,23 +35,15 @@ void CarLinkedList::print() {
 		while(c != 0) {
 			cout << c->car.getMake() << " " << c->car.getModel() << " " 
 			<< c->car.getYear() << " " c->car.getColor();
+			c = c->next;
 		}
 		cout << "\n";
 	}
 }
 
-CarLinkedList CarLinkedList::getCarsByYear(int y){
-	if (size == 0) {
-		cout << "getCarsByYear(): Array is Empty";
-	}
-	else {
-
-		node *c = head;
-		while(c != 0) {
-			if 
-		}
-		cout << "\n";
-	}
+// Get cars by year through QuickSort
+CarLinkedList CarLinkedList::getCarsByYear(){
+	return 0;
 }
 
 // Get List Size
@@ -123,5 +115,21 @@ Car CarLinkedList::remove(int n) {
 		}
 	}
 } 
+
+Car* CarLinkedList::getArray() {
+	Car* cars;
+	node *c = head;
+		while(c != 0) {
+			cars[i] = &c;
+			c = c->next;
+		}
+	return cars;
+}
+
+void CarLinkedList::copy(Car* cars) {
+	for (int i; i < sizeof(cars), i++) {
+		add(c[i]);
+	}
+}
 
 #endif
