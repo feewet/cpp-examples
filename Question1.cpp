@@ -9,6 +9,8 @@
 #include <cstddef>
 #include <bits/stdc++.h>
 #include "DynamicCarArray.h"
+#include "Car.h"
+#include "QuickSortCar.h"
 using namespace std;
 
 class Question1 {

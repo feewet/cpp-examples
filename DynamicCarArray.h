@@ -3,7 +3,8 @@
 #ifndef DYNAMICCARARRAY_H_
 #define DYNAMICCARARRAY_H_
 
-class Car;
+#include "Car.h"
+
 // Dynamnic array to hold Cars.
 class DynamicCarArray {
 	private:

@@ -3,7 +3,7 @@
 #ifndef CARLINKEDLIST_H_
 #define CARLINKEDLIST_H_
 
-class Car;
+#include "Car.h"
 
 // Struct to store Cars
 struct node {
