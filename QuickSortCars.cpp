@@ -2,6 +2,7 @@
 
 #ifndef QUICKSORTCARS_H_
 #include "QuickSortCars.h"
+#include "Car.h"
 
 Car* quickSortCars::sort(Car* cars) {
 	quickSortCars(&cars, 0, (cars.count() - 1));
@@ -18,8 +19,7 @@ void QuickSortCars::swap(Car* a, Car* b)
 
 // places all elements smaller than pivot left of pivot
 // places all elements larger than pivot to right of pivot
-int QuickSortCars::partition(Car *arr, int low, int high)
-{
+int QuickSortCars::partition(Car *arr, int low, int high) {
     int pivot = arr[high].getYear(); // pivot
     int i = (low - 1); // smaller element
   
