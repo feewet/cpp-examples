@@ -25,7 +25,7 @@ class CarLinkedList{
 		bool isEmpty(); // return true if empty
 		Car get(int n); // get Car at n
 		Car remove(int n); // Remove Car at n
-		Car* getArray();
+		Car* toArray();
 		void copy(Car* cars);
 };
 

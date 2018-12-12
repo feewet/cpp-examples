@@ -119,7 +119,7 @@ Car CarLinkedList::remove(int k) {
 	}
 } 
 
-Car* CarLinkedList::getArray() {
+Car* CarLinkedList::toArray() {
 	Car* cars;
 	node *c = head;
 	int i = 0;
