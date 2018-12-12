@@ -1,8 +1,8 @@
 // DynamicCarArray.cpp
 
 #ifndef DYNAMICCARARRAY_H_
-#include "DynamicCarArray.h"
 #include "Car.h"
+#include "DynamicCarArray.h"
 #include "QuickSortCars.h"
 
 // Default Constructor
