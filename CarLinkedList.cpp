@@ -6,22 +6,22 @@
 // Constructor
 CarLinkedList::CarLinkedList() {
 	size = 0;
-	head = NULL;
-	tail = NULL;
+	head = 0;
+	tail = 0;
 	head->next = tail;
 }
 
 // Destructor
 CarLinkedList::~CarLinkedList() {
 	node *c = head;
-	node previous = NULL;
-	while(c != NULL) {
+	node *previous = 0;
+	while(c != 0) {
 		previous = c;
 		c = c->next;
 		delete previous;
 	}
-	head = NULL;
-	tail = NULL;
+	head = 0;
+	tail = 0;
 }
 
 // Print list
@@ -32,7 +32,7 @@ void CarLinkedList::print() {
 	}
 	else {
 		node *c = head;
-		while(c != NULL) {
+		while(c != 0) {
 			cout << c->car.getMake() << " " << c->car.getModel() << " " 
 			<< c->car.getYear() << " " c->car.getColor();
 		}
@@ -47,7 +47,7 @@ CarLinkedList CarLinkedList::getCarsByYear(int y){
 	else {
 
 		node *c = head;
-		while(c != NULL) {
+		while(c != 0) {
 			if 
 		}
 		cout << "\n";
@@ -60,7 +60,7 @@ int CarLinkedList::size() {
 }
 
 // Return true if LinkedList is empty
-boolean CarLinkedList::isEmpty() {
+bool CarLinkedList::isEmpty() {
 	if (size == 0) {
 		return true;
 	}
@@ -73,12 +73,12 @@ boolean CarLinkedList::isEmpty() {
 void CarLinkedList::add(Car c) {
 	node *n = new node;
 	n->car = c;
-	n->next = NULL;
+	n->next = 0;
 
-	if (head == NULL) {
+	if (head == 0) {
 		head = n;
 		tail = n;
-		n = NULL;
+		n = 0;
 	}
 	else {
 		tail->next = n;
@@ -111,7 +111,7 @@ Car CarLinkedList::remove(int n) {
 	}
 	else {
 		node *n = head;
-		node *previous = null;
+		node *previous = 0;
 		for (int i = 0; i < size; i++) {
 			if (i == n) {
 				previous->next = n->next;

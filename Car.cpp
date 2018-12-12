@@ -5,6 +5,8 @@
 
 #include <string>
 
+Car::Car() {}
+
 Car::Car(std::string _make, std::string _model, int _year, std::string _color) {
 	make = _make;
 	model = _model;
