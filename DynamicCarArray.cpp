@@ -2,6 +2,7 @@
 
 #ifndef DYNAMICCARARRAY_H_
 #include "DynamicCarArray.h"
+#include "QuickSortCars.h"
 
 // Default Constructor
 DynamicCarArray::DynamicCarArray() {
