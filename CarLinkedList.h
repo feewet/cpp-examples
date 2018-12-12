@@ -14,13 +14,14 @@ class CarLinkedList{
 	private:
 		node *head;
 		node *tail;
-		int size;
+		int length;
 	public:
 		CarLinkedList(); // Default Constructor
 		~CarLinkedList(); // Destructor
 		void print(); // Print list
 		CarLinkedList getCarByYear();
 		void add(Car c); // Add Car
+		int length(); // return linked list length
 		Car get(int n); // get Car at n
 		Car remove(int n); // Remove Car at n
 		Car* getArray();

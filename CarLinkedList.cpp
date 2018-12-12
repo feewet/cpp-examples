@@ -4,10 +4,11 @@
 #include "Car.h"
 #include "CarLinkedList.h"
 //#include <string>
+#include <iostream>
 
 // Constructor
 CarLinkedList::CarLinkedList() {
-	size = 0;
+	length = 0;
 	head = 0;
 	tail = 0;
 	head->next = tail;
@@ -29,7 +30,7 @@ CarLinkedList::~CarLinkedList() {
 // Print list
 void CarLinkedList::print() {
 	cout << "Printing...\n";
-	if (size == 0) {
+	if (length == 0) {
 		cout << "print(): Array is Empty";
 	}
 	else {
@@ -49,13 +50,13 @@ CarLinkedList CarLinkedList::getCarsByYear(){
 }
 
 // Get List Size
-int CarLinkedList::size() {
-	return size;
+int CarLinkedList::length() {
+	return length;
 }
 
 // Return true if LinkedList is empty
 bool CarLinkedList::isEmpty() {
-	if (size == 0) {
+	if (length == 0) {
 		return true;
 	}
 	else {
@@ -79,18 +80,18 @@ void CarLinkedList::add(Car c) {
 		tail = n;
 	}
 
-	size++;
+	length++;
 }
 
 // Get car at nth position
-Car CarLinkedList::get(int n) {
-	if (n < 0 || n >= size){
+Car CarLinkedList::get(int k) {
+	if (n < 0 || n >= length){
 		cout << "Invalid Index n=" << n;
 	}
 	else {
 		node *n = head;
-		for (int i = 0; i < size; i++) {
-			if (i == n) {
+		for (int i = 0; i < length; i++) {
+			if (i == k) {
 				return n->car;
 			}
 			n = n->next;
@@ -100,17 +101,17 @@ Car CarLinkedList::get(int n) {
 
 // Remove Car at n
 Car CarLinkedList::remove(int n) {
-	if (n < 0 || n >= size){
+	if (n < 0 || n >= length){
 		cout << "Invalid Index n=" << n;
 	}
 	else {
 		node *n = head;
 		node *previous = 0;
 		int k = 0;
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < length; i++) {
 			if (i == k) {
 				previous->next = n->next;
-				size--;
+				length--;
 				return n->car;
 			}
 			previous = n;
@@ -132,7 +133,7 @@ Car* CarLinkedList::getArray() {
 
 // Copy array
 void CarLinkedList::copy(Car* cars) {
-	for (int i; i < sizeof(cars); i++) {
+	for (int i = 0; i < sizeof(cars); i++) {
 		add(cars[i]);
 	}
 }
