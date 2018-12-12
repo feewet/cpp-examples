@@ -19,9 +19,10 @@ class CarLinkedList{
 		CarLinkedList(); // Default Constructor
 		~CarLinkedList(); // Destructor
 		void print(); // Print list
-		CarLinkedList getCarByYear();
+		CarLinkedList getCarsByYear(); // return cars sorted by year
 		void add(Car c); // Add Car
 		int length(); // return linked list length
+		bool isEmpty(); // return true if empty
 		Car get(int n); // get Car at n
 		Car remove(int n); // Remove Car at n
 		Car* getArray();

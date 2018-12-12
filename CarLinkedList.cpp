@@ -37,7 +37,7 @@ void CarLinkedList::print() {
 		node *c = head;
 		while(c != 0) {
 			std::cout << c->car.getMake() << " " << c->car.getModel() << " ";
-			std::cout << c->car.getYear() << " " c->car.getColor();
+			std::cout << c->car.getYear() << " " << c->car.getColor();
 			c = c->next;
 		}
 		cout << "\n";
@@ -86,7 +86,7 @@ void CarLinkedList::add(Car c) {
 // Get car at nth position
 Car CarLinkedList::get(int k) {
 	if (k < 0 || k >= size){
-		std::cout << "Invalid Index n=" << n;
+		std::cout << "Invalid Index k=" << k;
 	}
 	else {
 		node *n = head;
@@ -100,14 +100,13 @@ Car CarLinkedList::get(int k) {
 }
 
 // Remove Car at n
-Car CarLinkedList::remove(int n) {
-	if (n < 0 || n >= size){
-		std::cout << "Invalid Index n=" << n;
+Car CarLinkedList::remove(int k) {
+	if (k < 0 || k >= size){
+		std::cout << "Invalid Index n=" << k;
 	}
 	else {
 		node *n = head;
 		node *previous = 0;
-		int k = 0;
 		for (int i = 0; i < size; i++) {
 			if (i == k) {
 				previous->next = n->next;
@@ -116,7 +115,6 @@ Car CarLinkedList::remove(int n) {
 			}
 			previous = n;
 			n = n->next;
-			k++;
 		}
 	}
 } 
