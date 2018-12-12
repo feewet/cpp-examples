@@ -42,8 +42,9 @@ DynamicCarArray DynamicCarArray::sortCarsByYear() {
 // sort cars by make
 DynamicCarArray DynamicCarArray::sortCarsByMake(std::string make) {
 	DynamicCarArray c;
+	Car car;
 	Car* cars;
-	n = 0;
+	int n = 0;
 	for (int i = 0; i < count; i++) {
 		car = get(i);
 		if (car.getMake() == make) {
@@ -70,7 +71,7 @@ Car DynamicCarArray::get(int n) {
 	}
 	else {
 		std::cout << "DynamicCarArray.get - Invalid index: " << n << "\n";
-		return 0;
+		return NULL;
 	}
 }
 
@@ -136,7 +137,7 @@ void DynamicCarArray::copy(Car *c) {
 	size = 2;
 	count = 0;
 	v = new Car[size];
-	for (int i; i < sizeof(c), i++) {
+	for (int i; i < sizeof(c); i++) {
 		add(c[i]);
 	}
 	delete c;
