@@ -35,10 +35,10 @@ DynamicCarArray Question1::populateArray() {
 		    char char_array[yearStr.length() + 1];  
 		    // copying the contents of the  
 		    // string to char array 
-		    strcpy(char_array, s.c_str());  
+		    strcpy(char_array, yearStr.c_str());  
 		    // parsing input using regex
-	    	sscanf(yearChar, "%d", &year);
-	    	
+	    	sscanf(char_array, "%d", &year);
+
 	    	// create new Car
 	    	cars.add(new Car(make, model, year, color));
 	    }
@@ -62,7 +62,7 @@ void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	sorted = cars.sortCarsByMake();
+	DynamicCarArray sorted = cars.sortCarsByMake();
 	if (sorted.length() != 0) {
 		sorted.print();
 	}
@@ -82,8 +82,16 @@ Car Question1::getCarInput() {
 	while (true) {
 		cout << "Enter Year: ";
 		cin >> yearStr;
-		if (regex_match(yearStr, regex("%d{4}"))) {
-			sscanf(yearStr, "%d", &year);
+		// declaring character array 
+	    char char_array[yearStr.length() + 1];  
+	    // copying the contents of the  
+	    // string to char array 
+	    strcpy(char_array, yearStr.c_str());  
+	    // parsing input using regex
+    	sscanf(char_array, "%d", &year);
+
+		if (regex_match(char_array, regex("%d{4}"))) {
+			sscanf(char_array, "%d", &year);
 			break;
 		}
 		else {

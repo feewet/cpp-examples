@@ -13,7 +13,7 @@ class DynamicCarArray {
 		DynamicCarArray(); // default constructor
 		~DynamicCarArray(); // default constructor
 		void print(); // print array
-		DynamicCarArray sortCarsByYear(int year); // sort cars by year
+		DynamicCarArray sortCarsByYear(); // sort cars by year
 		DynamicCarArray sortCarsByMake(std::string make); // sort cars by make
 		void add(Car c); // add Car to array
 		Car get(int n); // Get car at index n
