@@ -24,16 +24,15 @@ DynamicCarArray Question1::populateArray() {
 		string make, model, yearStr, color;
 		int year;
 
-		while (getline(file, line))
-	    {
+		while (getline(file, line)) {
 	    	// read 4 lines
-	    	getline(ss, make, ',');
-	    	getline(ss, model, ',');
-	    	getline(ss, yearStr, ',');
-	    	getline(ss, color, ',');
+	    	getline(line, make, ',');
+	    	getline(line, model, ',');
+	    	getline(line, yearStr, ',');
+	    	getline(line, color, ',');
 	    	sscanf(yearStr, "%d", &year);
 	    	// create new car
-	    	cars.add(new Car(make, model, year, color););
+	    	cars.add(new Car(make, model, year, color));
 	    }
 	    file.close();
 	}

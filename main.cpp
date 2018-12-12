@@ -9,6 +9,7 @@
 using namespace std;
 
 #include <iostream>
+#include <istream>
 #include <fstream>
 #include <stdio.h>
 #include <string>

@@ -30,13 +30,20 @@ void DynamicCarArray::print() {
 
 // sort cars by year
 DynamicCarArray DynamicCarArray::sortCarsByYear() {
-	Car sorted;
-	
+	return QuickSortCars.sort(this);
 }
 
 // sort cars by make
 DynamicCarArray DynamicCarArray::sortCarsByMake(string make) {
+	DynamicCarArray cars = new DynamicCarArray();
+	for (int i = 0; i < count; i++) {
+		car = get(i);
+		if (car.getMake() == make) {
+			cars.add(get);
+		}
+	}
 
+	return matchCars;
 }
 
 // Add one element
@@ -50,7 +57,7 @@ void DynamicCarArray::add(Car c) {
 
 Car DynamicCarArray::get(int n) {
 	if (n > 0 && n < count) {
-		return car[n]
+		return car[n];
 	}
 	else {
 		cout << "DynamicCarArray.get - Invalid index: " << n << endl;

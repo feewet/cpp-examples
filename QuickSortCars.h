@@ -5,7 +5,7 @@
 
 class QuickSortCars {
 	private:
-		void QuickSortCars(Car* arr, int low, int high);
+		void quickSortCars(Car* arr, int low, int high);
 		int partition(Car *arr, int low, int high);
 		int swap(Car* a, Car* b);
 	public:

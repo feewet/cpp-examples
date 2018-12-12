@@ -22,13 +22,13 @@ void QuickSortCars::swap(Car* a, Car* b)
 // places all elements larger than pivot to right of pivot
 int QuickSortCars::partition(Car *arr, int low, int high)
 {
-    int pivot = arr[high].year; // pivot
+    int pivot = arr[high].getYear(); // pivot
     int i = (low - 1); // smaller element
   
     for (int j = low; j <= high- 1; j++) 
     { 
         // element <= pivot
-        if (arr[j].year <= pivot)
+        if (arr[j].getYear() <= pivot)
         { 
             i++; // increment index of smaller element 
             swap(&arr[i], &arr[j]); 
