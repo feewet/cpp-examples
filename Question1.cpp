@@ -21,7 +21,6 @@ DynamicCarArray Question1::populateArray() {
 	ofstream file("Cars.txt");
 	if (file.is_open()) {
 		string line;
-		Car car;
 		string make, model, yearStr, color;
 		int year;
 
@@ -34,8 +33,7 @@ DynamicCarArray Question1::populateArray() {
 	    	getline(ss, color, ',');
 	    	sscanf(yearStr, "%d", &year);
 	    	// create new car
-	    	car = new Car(make, model, year, color);
-	    	cars.add(car);
+	    	cars.add(new Car(make, model, year, color););
 	    }
 	    file.close();
 	}
@@ -57,9 +55,9 @@ void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	sort = cars.sortCarsByMake();
-	if (sort.length() != 0) {
-		sort.print();
+	sorted = cars.sortCarsByMake();
+	if (sorted.length() != 0) {
+		sorted.print();
 	}
 	else {
 		cout << "No cars with make: " << make << endl;

@@ -4,12 +4,12 @@
 #define QUICKSORTCARS_H_
 
 class QuickSortCars {
-	public:
-		DynamicCarArray sort(Car cars);
-	priavte:
+	private:
 		void QuickSortCars(Car* arr, int low, int high);
 		int partition(Car *arr, int low, int high);
 		int swap(Car* a, Car* b);
+	public:
+		DynamicCarArray sort(Car cars);
 };
 
 #endif
