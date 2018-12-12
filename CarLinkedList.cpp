@@ -46,7 +46,7 @@ void CarLinkedList::print() {
 
 // Get cars by year through QuickSort
 CarLinkedList CarLinkedList::getCarsByYear(){
-	return QuickSortCars.sort(this);
+	return QuickSortCars::sort(this);
 }
 
 // Get List Size
