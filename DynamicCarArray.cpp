@@ -4,6 +4,7 @@
 #include "Car.h"
 #include "DynamicCarArray.h"
 #include "QuickSortCars.h"
+#include <iostream>
 
 // Default Constructor
 DynamicCarArray::DynamicCarArray() {
@@ -19,15 +20,15 @@ DynamicCarArray::~DynamicCarArray() {
 
 // Print array
 void DynamicCarArray::print() {
-	cout << "Printing...\n";
+	std::cout << "Printing...\n";
 	if (count == 0) {
-		cout << "Array is Empty";
+		std::cout << "Array is Empty";
 	}
 	for (int i = 0; i < count; i++) {
-		cout << v[i].getMake() << " " << v[i].getModel() << " " 
+		std::cout << v[i].getMake() << " " << v[i].getModel() << " " 
 		<< v[i].getYear() << " " v[i].getColor();
 	}
-	cout << "\n";
+	std::cout << "\n";
 }
 
 // sort cars by year
@@ -64,7 +65,7 @@ Car DynamicCarArray::get(int n) {
 		return car[n];
 	}
 	else {
-		cout << "DynamicCarArray.get - Invalid index: " << n << endl;
+		std::cout << "DynamicCarArray.get - Invalid index: " << n << endl;
 		return NULL;
 	}
 }
@@ -72,7 +73,7 @@ Car DynamicCarArray::get(int n) {
 // Remove one element given index
 void DynamicCarArray::remove(int n) {
 	if (count == 0) {
-		cout << "No remaining elements\n";
+		std::cout << "No remaining elements\n";
 	}
 	else {
 		// find element
