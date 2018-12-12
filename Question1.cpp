@@ -31,7 +31,7 @@ DynamicCarArray Question1::populateArray() {
 	    	getline(ss, model, ',');
 	    	getline(ss, yearStr, ',');
 	    	getline(ss, color, ',');
-	    	sscanf(yearStr, "%d", &year);
+	    	sscanf(yearStr[], "%d", &year);
 	    	// create new car
 	    	cars.add(new Car(make, model, year, color));
 	    }
