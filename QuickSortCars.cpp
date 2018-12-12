@@ -1,8 +1,8 @@
 // QuickSort.cpp
 
 #ifndef QUICKSORTCARS_H_
-#include "QuickSortCars.h"
 #include "Car.h"
+#include "QuickSortCars.h"
 
 Car* quickSortCars::sort(Car* cars) {
 	quickSortCars(&cars, 0, (cars.count() - 1));
