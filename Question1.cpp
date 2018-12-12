@@ -40,7 +40,7 @@ DynamicCarArray Question1::populateArray() {
 	    	sscanf(char_array, "%d", &year);
 
 	    	// create new Car
-	    	cars.add(new Car(make, model, year, color));
+	    	cars.add(Car(make, model, year, color));
 	    }
 	    file.close();
 	}
@@ -58,11 +58,11 @@ void Question1::sortCarsByYear(DynamicCarArray cars) {
 	cars.sortCarsByYear().print();
 }
 
-void Question1::sortCarsByMake(string make, DynamicCarArray cars) {
+void Question1::sortCarsByMake(DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	DynamicCarArray sorted = cars.sortCarsByMake();
+	DynamicCarArray sorted = cars.sortCarsByMake(make);
 	if (sorted.length() != 0) {
 		sorted.print();
 	}
@@ -101,7 +101,7 @@ Car Question1::getCarInput() {
 	cout << "Enter Color: ";
 	cin >> color;
 
-	return new Car(make, model, year, color);
+	return Car(make, model, year, color);
 }
 
 void Question1::run() {
@@ -120,7 +120,7 @@ void Question1::run() {
 		if (choice == 3) {
 			sortCarsByYear(cars); // sort cars by year
 		}
-		if (choice == 4) {   
+		if (choice == 4) {
 			sortCarsByMake(cars); // sort cars by make
 		}
 		if (choice == 5) {   
