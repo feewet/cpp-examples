@@ -59,7 +59,7 @@ void Question1::sortCarsByMake(DynamicCarArray cars) {
 	string make;
 	cout << "Enter Make: ";
 	cin >> make;
-	DynamicCarArray sorted = cars.sortCarsByMake(make, cars);
+	DynamicCarArray sorted = cars.sortCarsByMake(make);
 	if (sorted.length() != 0) {
 		sorted.print();
 	}
