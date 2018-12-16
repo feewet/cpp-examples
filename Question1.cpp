@@ -19,7 +19,7 @@ class Question1 {
 	// Populate Array from Cars.txt
 DynamicCarArray populateArray() {
 	DynamicCarArray cars;
-	ifstream file("Cars.txt");
+	ifstream file("CarRecords.txt");
 	if (file.is_open()) {
 		string line;
 		string make, model, yearStr, color;
@@ -90,7 +90,7 @@ Car getCarInput() {
 	    strcpy(char_array, yearStr.c_str());  
 	    // parsing input using regex
     	sscanf(char_array, "%d", &year);
-
+    	
 		if (regex_match(char_array, regex("%d"))) {
 			sscanf(char_array, "%d", &year);
 			break;
